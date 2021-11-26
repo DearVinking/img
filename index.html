@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
+  integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP"
+  crossorigin="anonymous"
+  />
+ </head>
+ <style type="text/css">
+ *{
+ 	font-family: Microsoft YaHei Light,Helvetica;
+ }
+ .bg {
+    background-image: url(https://cdn.vinking.top/vEtLCTRc4KYC6Vv.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    opacity: .4;
+    filter: blur(8px);
+}
+.word{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.word .h1 {
+	color: #9d9c9c;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+ </style>
+<body>
+<div class="bg"></div>
+<div class="mdui-valign word">
+  <p class="mdui-center h1">Content Delivery Network For Vinking</p>
+</div>
+</body>
+<script
+  src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"
+  integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript" >
+    window.onload = function(){setRem();};
+    window.onresize = function(){setRem();};
+    function setRem(){
+        var width = document.body.offsetWidth;
+        var nowFont=width/375*4;
+        var htmlFont=document.getElementsByTagName('html')[0];
+        htmlFont.style.fontSize =nowFont+"px";
+    }
+</script>
+</html>
